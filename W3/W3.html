@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercise</title>
+    </head>
+    <body>
+        <h2>PHP Form</h2><br>
+
+            <form action="W3.php" method="GET">
+                <input type="hidden" name="sent" value="1">
+
+                <p>Your name: 
+                    <input type="text" name="name">
+                </p>
+                <p>Sex:
+                    <label><input type="radio" name="gender" value="male">Male</label>
+                    <label><input type="radio" name="gender" value="female">Female</label>
+                    <label><input type="radio" name="gender" value="other">Other</label>
+                </p>
+                <p>Class: 
+                    <input type="text" name="class">
+                </p>
+                <p>University:
+                    <input type="text" name="university">
+                </p>
+                <p>Hobbies: <br>
+                    <label><input type="checkbox" name="langs[]" value="1">Xem phim <br></label>
+                    <label><input type="checkbox" name="langs[]" value="2">Mua sắm <br></label>
+                    <label><input type="checkbox" name="langs[]" value="3">Nghe nhạc <br></label>
+                    <label><input type="checkbox" name="langs[]" value="4">Đọc sách <br></label>
+                    <label><input type="checkbox" name="langs[]" value="5">Chơi game <br></label>
+                    <label><input type="checkbox" name="langs[]" value="6">Học bài <br></label>
+                </p>
+                <button type="submit">Submit</button>
+            </form>
+    </body>
+</html>
