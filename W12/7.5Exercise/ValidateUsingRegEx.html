@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Inputs</title>
+    <script>
+        function validateURL() {
+            url = document.querySelector('input[name="url"]').value;
+            urlRegEx = /^(http(s):\/\/.)[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)$/;
+            if (urlRegEx.test(url)) {
+                alert("Url không hợp lệ!");
+                return false;
+            }
+            return true;
+        }
+        function validateEmail() {
+            email = document.querySelector('input[name="email"]').value;
+            emailRegEx = /[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+            if (emailRegEx.test(email)) {
+                return true;
+            } else {
+                alert("Email không hợp lệ!")
+                return false;
+            }
+        }
+        function validateTelephone() {
+            telephone = document.querySelector('input[name="telephone"]').value;
+            telephoneRegEx = /^((\+84)|0)[0-9]{9}$/;
+            if (telephoneRegEx.test(telephone)) {
+                return true;
+            } else {
+                alert("Số điện thoại không hợp lệ!")
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Validate Form</h1>
+    <form action="">
+        <table>
+            <tr>
+                <td><label>URL:</label></td>
+                <td><input type="text" name="url"></td>
+            </tr>
+            <tr>
+                <td><label>Email:</label></td>
+                <td><input type="text" name="email"></td>
+            </tr>
+            <tr>
+                <td><label>Telephone:</label></td>
+                <td><input type="text" name="telephone"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Register"></td>
+                <td><input type="reset" value="Reset"></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        submitButton = document.querySelector('input[type="submit"]');
+        submitButton.onclick = function(event) {
+            if (!validateURL() ||
+                !validateEmail() || !validateTelephone()) {
+
+                event.preventDefault();
+            }else
+            alert("Xác minh thành công");
+        }
+    </script>
+</body>
+</html>

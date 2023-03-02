@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE class SYSTEM "class.dtd">
+
+<!-- ?xml-model href="class.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"? -->
+
+<class>
+    <name>Web programming</name>
+    <classroom>B1-303</classroom>
+    <teacher name="Dao Trung Kien"
+        tel="0911111111" />
+    <students>
+        <student gender="male">
+            <name>Nguyen Van X</name>
+            <birthday>2001-01-01</birthday>
+        </student>
+        <student gender="female">
+            <name>Tran Thi Y</name>
+            <birthday>2002-02-02</birthday>
+        </student>
+        <student gender="male">
+            <name>Le Van Z</name>
+            <birthday>2003-03-03</birthday>
+        </student>
+    </students>
+</class>

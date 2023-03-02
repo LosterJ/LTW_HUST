@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="class">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string" />
+                
+                <xs:element name="classroom" type="xs:string"></xs:element>
+
+                <xs:element name="teacher">
+                    <xs:complexType>
+                        <xs:attribute name="name" type="xs:string"></xs:attribute>
+                        <xs:attribute name="tel" type="xs:string"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="students">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="student" type="student" minOccurs="0" maxOccurs="unbounded">
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    
+    <xs:complexType name="student">
+        <xs:sequence>
+            <xs:element name="name">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="20"></xs:maxLength>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="birthday" type="xs:date"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="gender" type="gender"></xs:attribute>
+    </xs:complexType>
+
+    <xs:simpleType name="gender">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="male"></xs:enumeration>
+            <xs:enumeration value="female"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

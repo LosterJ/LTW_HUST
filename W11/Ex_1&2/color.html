@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Event Handling</title>
+    <style>
+        .red-labeled {
+            color: red;
+        }
+        .blue-labeled {
+            color: blue;
+        }
+        .green-labeled {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="red-labeled" onmouseover="changeToRed()" onmouseout="StartingColor()">
+        RED
+    </h2>
+    <h2 class="green-labeled" onmouseover="changeToGreen()" onmouseout="StartingColor()">
+        GREEN
+    </h2>
+    <h2 class="blue-labeled" onmouseover="changeToBlue()" onmouseout="StartingColor()">
+        BLUE
+    </h2>
+    <p>
+        This is the content of paragraph of text. This paragraph will change color when you mouse over the top label. 
+    </p>
+    <script>
+        paragraph = document.querySelector('p');
+        function changeToRed() {
+            paragraph.style.color = "red";
+        }
+        function changeToGreen() {
+            paragraph.style.color = "green";
+        }
+        function changeToBlue() {
+            paragraph.style.color = "blue";
+        }
+        function StartingColor() {
+            paragraph.style.color = "black";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-2</title>
+    <link rel="stylesheet" href="DIV_mystyle.css">
+</head>
+
+<body>
+	<header>
+		<nav>  
+			<ul>
+				<li><a href="#">Home</a>
+				<li><a href="#">Menu</a>
+				<li><a href="#">My Page</a>
+				<li><a href="#">Log out</a>
+			</ul>
+		</nav>
+	</header>
+	<section>
+		<strong>8.2 Layout with DIV tag</strong>
+	</section>
+	<section id="pageContent">
+		<main role="main">
+			<article>
+				<h2>General</h2>
+				<p>Most Web page designers use a table-based layout to achieve a coherent and consistent look. There's adifferent way to achieve the same look. Using CSS and DIV tags reduces markup code, speeds up pagedownloads, separates content from its visual presentation, and brings your code closer to Web standards compliance--all while making your website more appealing to search engine spiders. Alejandro Gervasio explains how it's done, with copious examples.</p>
+			</article>
+			<article>
+				<h2>Step 1: Introduction</h2>
+				<p>We see it every day. As we surf the huge network of the Web, we are able to appreciate several page layouts through different websites. They run the gamut from classical but highly effective two and three-column designs, to those exotic and certainly uncommon designs which seem not to fall into a specific category.
+                    For many years, Web designers have been sticking firmly to table-based layouts, achieving coherent and consistent looks by the use of complex table nesting techniques, gif spacers and other well-known design processes. Currently, table layout still continues to have a strong presence on the Web, since it provides wide cross-browser compatibility. Tables are pretty well supported elements for browsers, and that’s an extremely powerful reason to use them for Web page layouts. But this strong compatibility comes with an extra cost.
+                    Most of the time, nested tables introduce lots of additional markup, and increase file size, download times and server requests when using graphics as spacers, even if they are cached later.
+                    Extra HTML pushes the important content farther down in the source code, making it less likely that a search spider will give Web pages a high relevance score for the keywords. With the use of CSS and DIV tags, we can achieve the same table-based layout effects, reduce our markup code noticeably, get faster page downloads, and separate content from its visual presentation. We are getting closer to standards-compliant code, and our Web pages are more appealing to search engine spiders.
+                    Now, is everything good about CSS? No, unfortunately. The major drawback with CSS is that browsers don’t display reliably some CSS rules because most of them are not completely compliant with Web standards. Still, the advantages of using CSS and DIV tags for page layout are numerous, and certainly are appealing to many Web designers, as modern browsers add more reliable support.
+                    With the pros and cons in our hands, let’s see the basics of how table design works.</p>
+			</article>
+		</main>
+		<aside>
+			<div>This is sidebar 1
+                <p>Sidebar's content</p>
+            </div>
+			<div>This is sidebar 2</div>
+			<div>This is sidebar 3</div>
+		</aside>
+	</section>
+	<footer>
+		<p>Footer content</p>
+	</footer>
+
+
+</body>
+
+</html>

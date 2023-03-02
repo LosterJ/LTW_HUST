@@ -1,0 +1,11 @@
+<!ELEMENT class (name, classroom, teacher, students)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT classroom (#PCDATA)>
+<!ELEMENT teacher (#PCDATA)>
+<!ATTLIST teacher name CDATA #REQUIRED>
+<!ATTLIST teacher tel CDATA #REQUIRED>
+<!ELEMENT students (student*)>
+<!ELEMENT student (name, birthday)>
+<!ATTLIST student gender (male | female) #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT birthday (#PCDATA)>

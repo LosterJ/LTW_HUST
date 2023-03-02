@@ -1,0 +1,37 @@
+CREATE DATABASE lab10;
+USE lab10;
+
+CREATE TABLE `item` (
+  `id` int NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `publisher` varchar(255) NOT NULL,
+  `sku` varchar(255),
+  `platform` varchar(255),
+  `price` int NOT NULL,
+  `image` varchar(255),
+  `created` timestamp DEFAULT CURRENT_TIMESTAMP,
+  `modified` timestamp DEFAULT CURRENT_TIMESTAMP
+);
+
+ALTER TABLE `item`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `item`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  
+CREATE TABLE `cart` (
+	`cartId` int NOT NULL,
+    `itemId` int NOT NULL,
+	`created` timestamp DEFAULT CURRENT_TIMESTAMP,
+	`modified` timestamp DEFAULT CURRENT_TIMESTAMP
+);
+
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`cartId`);
+
+ALTER TABLE `cart`
+  MODIFY `cartId` int NOT NULL AUTO_INCREMENT;
+  
+ALTER TABLE cart
+ADD CONSTRAINT fk_cart
+FOREIGN KEY (itemId) REFERENCES item(id);

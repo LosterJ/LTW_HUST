@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Search</title>
+    <script>
+        function sendSearchRequest() {
+            var request = new XMLHttpRequest();
+            productName = document.querySelector('input[name="product-name"]').value;
+            if (request !== null) {
+                request.open("GET", "SearchAjax.php?product-name=" + productName);
+                
+                request.onreadystatechange = function(){
+                    //Kiem tra yeu cau co thanh cong khong
+                    if (request.readyState === 4 && request.status === 200) {
+                        document.getElementById('search-result').innerHTML = request.responseText;
+                    }
+                };
+                request.send();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Search suggestions by AJAX</h1>
+    <form>
+        Product name: <input type="text" name="product-name" onchange onpropertychange onkeyuponpaste oninput="sendSearchRequest()">
+        <br>*Smartphone
+    </form>
+    <h3>Search result:</h3>
+    <div id="search-result"></div>
+</body>
+</html>
